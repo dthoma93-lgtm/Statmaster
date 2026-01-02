@@ -49,7 +49,7 @@ def apply_background_2024(base_stats):
     for i, name in enumerate(bg_names,1):
         stats, feat = BACKGROUNDS_2024[name]
         print(f"{i:2}. {name:11} | Stats: {','.join(stats):13} | Feat: {feat}")
-    choice = int(input("\n Select Background 9=(1-16): ")) - 1
+    choice = int(input("\n Select Background from (1-16): ")) - 1
     selected_bg = bg_names[choice]
     eligible_stats, feat = BACKGROUNDS_2024[selected_bg]
 
@@ -122,4 +122,5 @@ if __name__ == "__main__":
     for i in range(3):
         score, name, mapping = recs[i]
         print(f"{i+1}. {name} (Fit Score: {score}):")
+
         print(f"   {mapping}")
